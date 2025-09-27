@@ -20,6 +20,7 @@ Modern UI/UX: Features a professional, soothing, two-column layout with color-co
 🛠️ Technology Stack
 
 Component	                                 Technology	                                           Purpose
+
 Backend Framework	                           FastAPI	                                              High-performance API server.
 LLM Provider	                              Google Gemini API	                                     Generative model for conversational responses.
 LLM Frameworks	                              LangChain & LlamaIndex	                               Conversational memory, RAG, and core LLM chain logic.
