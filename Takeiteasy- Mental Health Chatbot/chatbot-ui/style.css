@@ -1,0 +1,172 @@
+/* --- Global & Layout Reset --- */
+/* Add to the beginning of your styles.css */
+body {
+    /* ... existing styles ... */
+    scroll-behavior: smooth; /* NEW: Makes all scrolling smooth */
+}
+
+/* Update the #chatBox styles */
+#chatBox {
+    /* ... existing styles ... */
+    padding: 20px 20px 0 20px; /* INCREASED PADDING: Gives space at the top/sides */
+    /* ... existing styles ... */
+}
+:root {
+    /* Retaining your existing light background color */
+    --background-color: #f3f6f8; 
+    
+    /* Using a softer blue/teal for chat elements, overriding your bright blue */
+    --primary-color: #3182CE; 
+    
+    --secondary-color: #4A5568; /* Dark text */
+    --chat-bg-color: #FFFFFF; /* White chat box */
+    --user-bubble-color: #E6FFFA; /* Light teal for User */
+    --ai-bubble-color: #F0F4F8; /* Light gray for AI */
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    display: flex;
+    /* Changed from the original structure to use flex for main container/sidebar layout */
+    height: 100vh;
+    overflow: hidden; 
+}
+
+/* --- Navigation (Sidebar) --- */
+nav {
+    /* Using your existing bright blue for the nav background */
+    background-color: #1e88e5; 
+    color: white;
+    
+    /* Changed structure to be a SIDEBAR (200px wide) instead of a top bar */
+    width: 200px; 
+    padding: 20px;
+    border-right: 1px solid #E2E8F0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    
+    /* Ensure the sidebar takes full height and arranges content vertically */
+    display: flex; 
+    flex-direction: column;
+}
+
+/* Inside styles.css */
+#MindEase {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: white; /* Text color on the bright blue nav */
+    /* ... other styles */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    padding: 10px 0;
+    color: #CFE2F3; /* Lighter color for links */
+    cursor: pointer;
+    font-size: 1.05em;
+    transition: color 0.2s;
+}
+
+nav li:hover {
+    color: white;
+}
+
+/* --- Main Chat Area --- */
+#chatContainer {
+    flex-grow: 1; /* Takes up all remaining width */
+    display: flex; 
+    flex-direction: column;
+    padding: 20px;
+    background-color: var(--background-color); /* Light gray behind the chat box */
+}
+
+/* --- Chat Messages Box --- */
+#chatBox {
+    flex-grow: 1;
+    overflow-y: auto; 
+    padding: 15px;
+    background-color: var(--chat-bg-color); /* White box for messages */
+    border-radius: 12px;
+    border: 1px solid #E2E8F0;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Stronger shadow */
+}
+
+/* --- Message Styling (Bubbles) --- */
+#chatBox > div {
+    max-width: 75%; /* Slightly narrower bubbles */
+    padding: 12px 16px;
+    border-radius: 18px;
+    margin: 10px 0;
+    line-height: 1.5;
+    word-wrap: break-word; /* Ensure long words break */
+    font-size: 0.95em;
+}
+
+/* User Message (You) */
+#chatBox > div:has(strong:contains("You:")) {
+    background-color: var(--user-bubble-color);
+    margin-left: auto;
+    border-bottom-right-radius: 4px;
+}
+
+/* AI Message */
+#chatBox > div:has(strong:contains("AI:")) {
+    background-color: var(--ai-bubble-color);
+    margin-right: auto;
+    border-bottom-left-radius: 4px;
+    white-space: pre-wrap; /* Essential for preserving list formatting from the AI */
+}
+
+/* --- Input Area --- */
+#inputArea {
+    display: flex;
+    padding: 15px;
+    background-color: var(--chat-bg-color);
+    border-radius: 12px;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#userInput {
+    flex-grow: 1;
+    padding: 14px;
+    border: 1px solid #CBD5E0;
+    border-radius: 8px;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+#userInput:focus {
+    border-color: var(--primary-color);
+}
+
+#inputArea button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 8px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+#inputArea button:hover {
+    background-color: #2C6CB9;
+}
+
+#inputArea button:active {
+    transform: scale(0.98);
+}

@@ -1,0 +1,20 @@
+#core-libraries
+langchain
+llama-index
+haystack
+
+# NEW: Gemini integrations for LangChain and LlamaIndex
+langchain-google-genai
+llama-index-llms-google-genai
+
+# NEW: Packages for local embedding model to avoid OpenAI embedding dependency
+llama-index-embeddings-huggingface
+sentence-transformers 
+
+#for a backend server
+fastapi
+uvicorn
+
+#additional tools
+requests
+python-dotenv
