@@ -19,12 +19,12 @@ Modern UI/UX: Features a professional, soothing, two-column layout with color-co
 
 🛠️ Technology Stack
 
-Component	Technology	Purpose
-Backend Framework	FastAPI	High-performance API server.
-LLM Provider	Google Gemini API	Generative model for conversational responses.
-LLM Frameworks	LangChain & LlamaIndex	Conversational memory, RAG, and core LLM chain logic.
-Frontend	HTML5, CSS3, JavaScript	Simple, responsive chat interface.
-Dependencies	python-dotenv, uvicorn	Environment variable management and ASGI server.
+Component	                                 Technology	                                           Purpose
+Backend Framework	                           FastAPI	                                              High-performance API server.
+LLM Provider	                              Google Gemini API	                                     Generative model for conversational responses.
+LLM Frameworks	                              LangChain & LlamaIndex	                               Conversational memory, RAG, and core LLM chain logic.
+Frontend	                                    HTML5, CSS3, JavaScript	                               Simple, responsive chat interface.
+Dependencies	                              python-dotenv, uvicorn	Environment variable management and ASGI server.
 
 
 🚀 Getting Started
@@ -52,7 +52,7 @@ venv\Scripts\activate     # Windows
 pip install -r requirements.txt
 Run the FastAPI Server: This starts the API backend on the port expected by the frontend.
 uvicorn main:app --reload --host 0.0.0.0 --port 8000
-The server is now running and waiting for requests at http://127.0.0.1:8000.
+
 
 4. Frontend Execution (UI)
    
