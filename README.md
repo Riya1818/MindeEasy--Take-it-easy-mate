@@ -19,14 +19,17 @@ Modern UI/UX: Features a professional, soothing, two-column layout with color-co
 
 🛠️ Technology Stack
 
-Component	                                 Technology	                                           Purpose
+The MindEase project utilizes the following technologies for its full-stack architecture:
 
-Backend Framework	                           FastAPI	                                              High-performance API server.
-LLM Provider	                              Google Gemini API	                                     Generative model for conversational responses.
-LLM Frameworks	                              LangChain & LlamaIndex	                               Conversational memory, RAG, and core LLM chain logic.
-Frontend	                                    HTML5, CSS3, JavaScript	                               Simple, responsive chat interface.
-Dependencies	                              python-dotenv, uvicorn	Environment variable management and ASGI server.
+Backend Framework: FastAPI is used as the high-performance API server.
 
+LLM Provider: The Google Gemini API serves as the generative model for conversational responses.
+
+LLM Frameworks: LangChain and LlamaIndex provide the conversational memory, RAG (Retrieval-Augmented Generation), and core LLM chain logic.
+
+Frontend: The client interface is built using standard web technologies: HTML5, CSS3, and JavaScript, resulting in a simple and responsive chat interface.
+
+Dependencies: Essential tools include python-dotenv for secure environment variable management and uvicorn for serving the ASGI (Asynchronous Server Gateway Interface) application.
 
 🚀 Getting Started
 
